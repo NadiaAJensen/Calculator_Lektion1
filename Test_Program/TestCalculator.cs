@@ -20,6 +20,10 @@ namespace Test_Program
         }
 
         [TestCase(30, 10, 20)]
+        [TestCase(20, 10, 10)]
+        [TestCase(10, 10, 0)]
+        [TestCase(0, 10, -10)]
+        [TestCase(50, 10, 40)]
         public void TestSubtract(double a, double b, double expectedsum)
         {
             double sum = uut.Subract(a, b);
