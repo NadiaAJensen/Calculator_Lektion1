@@ -33,5 +33,18 @@ namespace Calculator_Lektion1
             double sum = Math.Pow(x,exp);
             return sum;
         }
+
+        //Double divide - Her skal du sørge for den ikke kan dividere med 0. - Gustav
+        //{
+        //}
+
+        //Lav en property som gemmer sidste sum - Katrine
+
+        //Metode som clear sum - Christina
+
+        //double squareroot - Nadia
+        //{
+        //}
+
     }
 }
