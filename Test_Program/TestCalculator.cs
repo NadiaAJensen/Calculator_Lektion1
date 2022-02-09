@@ -43,5 +43,12 @@ namespace Test_Program
             double sum = uut.Power(a, b);
             Assert.That(sum, Is.EqualTo(expectedsum));
         }
+        
+        [TestCase(81,9)]
+        public void TestSquareroot(double d, double expectedsum)
+        {
+            double sum = uut.Squareroot(d);
+            Assert.That(sum, Is.EqualTo(expectedsum));
+        }
     }
 }

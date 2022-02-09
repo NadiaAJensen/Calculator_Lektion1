@@ -42,9 +42,11 @@ namespace Calculator_Lektion1
 
         //Metode som clear sum - Christina
 
-        //double squareroot - Nadia
-        //{
-        //}
+        public double Squareroot(double d) //Nadia
+        {
+            double sum = Math.Sqrt(d);
+            return sum;
+        }
 
     }
 }
