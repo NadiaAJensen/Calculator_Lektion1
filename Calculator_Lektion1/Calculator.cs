@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -51,7 +52,17 @@ namespace Calculator_Lektion1
 
         public double Squareroot(double d) //Nadia
         {
+            if (d < 0)
+                throw new Exception("Will not give a real number");
             Sum = Math.Sqrt(d);
+            return Sum;
+        }
+
+        public double Devide(double a, double b)
+        {
+            if (b == 0)
+                throw new Exception("Not allowed to divide by 0");
+            Sum = a / b;
             return Sum;
         }
 
