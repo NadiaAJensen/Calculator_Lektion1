@@ -1,3 +1,4 @@
+using System;
 using Calculator_Lektion1;
 using NUnit.Framework;
 
@@ -50,5 +51,29 @@ namespace Test_Program
             double sum = uut.Squareroot(d);
             Assert.That(sum, Is.EqualTo(expectedsum));
         }
+
+        [TestCase(-81, 9)]
+        public void TestSquarerootWithException(double d, double expectedsum)
+        {
+            Assert.That(()=>uut.Squareroot(d), Throws.TypeOf<Exception>().With.Message.EqualTo("Will not give a real number"));
+            
+        }
+
+        [TestCase(10, 2, 5)]
+        [TestCase(50, 5, 10)]
+        public void TestDevideWithSucces(double a, double b, double expectedsum)
+        {
+            double sum = uut.Devide(a, b);
+            Assert.That(sum, Is.EqualTo(expectedsum));
+        }
+
+
+        [TestCase(50, 0, 10)]
+        public void TestDevisionWithZero(double a, double b, double expectedsum)
+        {
+            Assert.That(() => uut.Devide(a,b),Throws.TypeOf<Exception>().With.Message.EqualTo("Not allowed to divide by 0"));
+        }
+
+
     }
 }
