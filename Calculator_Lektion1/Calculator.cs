@@ -42,7 +42,7 @@ namespace Calculator_Lektion1
 
         //Lav en property som gemmer sidste sum - Katrine
 
-        //Metode som clear sum - Christina
+        
 
         public void ClearSum()
         {
