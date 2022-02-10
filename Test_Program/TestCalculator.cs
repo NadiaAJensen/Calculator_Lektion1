@@ -74,6 +74,14 @@ namespace Test_Program
             Assert.That(() => uut.Devide(a,b),Throws.TypeOf<Exception>().With.Message.EqualTo("Not allowed to divide by 0"));
         }
 
+        [TestCase(3, 4, 0)]
+        public void TestClearSum(double a, double b, double expectedsum)
+        {
+            uut.Multiply(a, b);
+            uut.ClearSum();
+            Assert.That(uut.Sum, Is.EqualTo(expectedsum));
+        }
+
 
     }
 }

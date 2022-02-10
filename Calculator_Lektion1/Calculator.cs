@@ -52,6 +52,8 @@ namespace Calculator_Lektion1
 
         public double Squareroot(double d) //Nadia
         {
+            if (d < 0)
+                throw new Exception("Will not give a real number");
             Sum = Math.Sqrt(d);
             return Sum;
         }
@@ -60,8 +62,8 @@ namespace Calculator_Lektion1
         {
             if (b == 0)
                 throw new Exception("Not allowed to divide by 0");
-            double sum = a / b;
-            return sum;
+            Sum = a / b;
+            return Sum;
         }
 
     }
