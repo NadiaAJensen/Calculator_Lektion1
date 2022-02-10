@@ -50,5 +50,14 @@ namespace Test_Program
             double sum = uut.Squareroot(d);
             Assert.That(sum, Is.EqualTo(expectedsum));
         }
+
+        [TestCase(3, 4, 0)]
+        public void TestClearSum(double a, double b, double expectedsum)
+        {
+            uut.Multiply(a, b);
+            uut.ClearSum();
+            Assert.That(uut.Sum, Is.EqualTo(expectedsum));
+        }
+
     }
 }

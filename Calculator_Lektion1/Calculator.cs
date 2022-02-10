@@ -9,29 +9,31 @@ namespace Calculator_Lektion1
 {
     public class Calculator
     {
+        public double Sum { get; set; }
+        
         public double Add(double a, double b)
         {
-            double sum = a + b;
+           Sum = a + b;
 
-            return sum;
+            return Sum;
         }
 
         public double Subract(double a, double b)
         {
-            double sum = a - b;
-            return sum;
+            Sum = a - b;
+            return Sum;
         }
 
         public double Multiply(double a, double b)
         {
-            double sum = a * b;
-            return sum;
+           Sum = a * b;
+            return Sum;
         }
 
         public double Power(double x, double exp)
         {
-            double sum = Math.Pow(x,exp);
-            return sum;
+            Sum = Math.Pow(x,exp);
+            return Sum;
         }
 
         //Double divide - Her skal du sørge for den ikke kan dividere med 0. - Gustav
@@ -42,10 +44,15 @@ namespace Calculator_Lektion1
 
         //Metode som clear sum - Christina
 
+        public void ClearSum()
+        {
+            Sum = 0;
+        }
+
         public double Squareroot(double d) //Nadia
         {
-            double sum = Math.Sqrt(d);
-            return sum;
+            Sum = Math.Sqrt(d);
+            return Sum;
         }
 
     }
