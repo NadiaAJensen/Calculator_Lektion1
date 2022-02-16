@@ -37,14 +37,6 @@ namespace Calculator_Lektion1
             return Sum;
         }
 
-        //Double divide - Her skal du sørge for den ikke kan dividere med 0. - Gustav
-        //{
-        //}
-
-        //Lav en property som gemmer sidste sum - Katrine
-
-        //Metode som clear sum - Christina
-
         public void ClearSum()
         {
             Sum = 0;
