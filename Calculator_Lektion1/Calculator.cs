@@ -50,7 +50,7 @@ namespace Calculator_Lektion1
             Sum = 0;
         }
 
-        public double Squareroot(double d) //Nadia
+        public double Squareroot(double d) 
         {
             if (d < 0)
                 throw new Exception("Will not give a real number");
@@ -58,7 +58,7 @@ namespace Calculator_Lektion1
             return Sum;
         }
 
-        public double Devide(double a, double b)
+        public double Divide(double a, double b)
         {
             if (b == 0)
                 throw new Exception("Not allowed to divide by 0");
