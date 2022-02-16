@@ -14,6 +14,8 @@ namespace Test_Program
         }
 
         [TestCase(5,10,15)]
+        [TestCase(3,25,28)]
+        [TestCase(47.6,4.8,52.4)]
         public void TestAdd(double a, double b, double expectedsum)
         {
             double sum = uut.Add(a, b);
@@ -32,6 +34,8 @@ namespace Test_Program
         }
 
         [TestCase(5, 10, 50)]
+        [TestCase(8,8,64)]
+        [TestCase(9,3,27)]
         public void TestMultiply(double a, double b, double expectedsum)
         {
             double sum = uut.Multiply(a, b);
@@ -39,42 +43,52 @@ namespace Test_Program
         }
 
         [TestCase(5, 2, 25)]
+        [TestCase(6,6,46656)]
+        [TestCase(8,4,4096)]
         public void TestPower(double a, double b, double expectedsum)
         {
             double sum = uut.Power(a, b);
             Assert.That(sum, Is.EqualTo(expectedsum));
         }
         
+        [TestCase(64,8)]
         [TestCase(81,9)]
+        [TestCase(25,5)]
         public void TestSquareroot(double d, double expectedsum)
         {
             double sum = uut.Squareroot(d);
             Assert.That(sum, Is.EqualTo(expectedsum));
         }
 
+        [TestCase(-64,8)]
         [TestCase(-81, 9)]
+        [TestCase(-25,5)]
         public void TestSquarerootWithException(double d, double expectedsum)
         {
             Assert.That(()=>uut.Squareroot(d), Throws.TypeOf<Exception>().With.Message.EqualTo("Will not give a real number"));
             
         }
 
+        [TestCase(100,10,10)]
         [TestCase(10, 2, 5)]
         [TestCase(50, 5, 10)]
-        public void TestDevideWithSucces(double a, double b, double expectedsum)
+        public void TestDivideWithSucces(double a, double b, double expectedsum)
         {
-            double sum = uut.Devide(a, b);
+            double sum = uut.Divide(a, b);
             Assert.That(sum, Is.EqualTo(expectedsum));
         }
 
-
+        [TestCase(76, 0, 10.9)]
+        [TestCase(60, 0, 70)]
         [TestCase(50, 0, 10)]
-        public void TestDevisionWithZero(double a, double b, double expectedsum)
+        public void TestDivisionWithZero(double a, double b, double expectedsum)
         {
-            Assert.That(() => uut.Devide(a,b),Throws.TypeOf<Exception>().With.Message.EqualTo("Not allowed to divide by 0"));
+            Assert.That(() => uut.Divide(a,b),Throws.TypeOf<Exception>().With.Message.EqualTo("Not allowed to divide by 0"));
         }
 
-        [TestCase(3, 4, 0)]
+        [TestCase(80, 6, 0)]
+        [TestCase(7, 9.6, 0)]
+        [TestCase(3.4, 8.6, 0)]
         public void TestClearSum(double a, double b, double expectedsum)
         {
             uut.Multiply(a, b);
