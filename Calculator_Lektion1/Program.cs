@@ -6,15 +6,6 @@ namespace Calculator_Lektion1
     {
         static void Main(string[] args)
         {
-            /*
-            Calculator C = new Calculator();
-
-            Console.WriteLine("Add: " + C.Add(5,15));
-            Console.WriteLine("Subtract: " + C.Subract(6,3));
-            Console.WriteLine("Multiply: " + C.Multiply(6,8));
-            Console.WriteLine("Power: " + C.Power(5,2));
-            */
-
             bool terminate = true;
             while (terminate)
             {
@@ -67,8 +58,8 @@ namespace Calculator_Lektion1
                             operation = "Squareroot";
                             break;
                         case '6':
-                            result = calculator.Devide(a, b);
-                            operation = "Devide";
+                            result = calculator.Divide(a, b);
+                            operation = "Divide";
                             break;
                         default:
                             throw new Exception("Choice out of index");
